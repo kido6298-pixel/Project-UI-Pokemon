@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kido6298-pixel/Project-UI-Pokemon#readme",
   "dependencies": {
+    "@smogon/calc": "0.12.0",
     "pokemon-showdown": "0.11.11"
   }
 }

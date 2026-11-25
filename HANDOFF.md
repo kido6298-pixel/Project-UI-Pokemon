@@ -76,3 +76,42 @@
 - Benchmark: 187.6 battles/second.
 - Next: implement structured battle state.
 - Full hidden-information isolation and Battle Revolution fidelity remain unverified.
+
+## Strategic AI v0.1 milestone
+- Implemented player-visible battle state tracking.
+- Added stat boosts, entry hazards, screens and field effects.
+- Added Gen 4 damage prediction using @smogon/calc.
+- Added defensive scenario evaluation.
+- Added basic speed and move priority prediction.
+- Implemented damage-based strategic agent.
+- Preserved v0.1 as a baseline agent.
+
+### Benchmark
+- Total battles: 4000
+- Strategic vs Random: 2000
+- Strategic wins: 1798
+- Strategic losses: 200
+- Draws: 2
+- Strategic win rate: 89.9%
+- Team 1 improvement: +42.7 percentage points
+- Team 2 improvement: +37.8 percentage points
+- Errors: 0
+- Turn limit results: 0
+- Move evaluations: 70661
+- Fallbacks: 0
+- Benchmark file: benchmarks/strategic_v01.json
+
+### Next
+- Verify exact stat reconstruction.
+- Verify damage predictions against simulator outcomes.
+- Implement incoming damage and action order evaluation.
+- Compare v0.2 against the frozen v0.1 baseline.
+
+### Limitations
+- Random team selection and forced switches.
+- No strategic voluntary switching.
+- No strategic status move evaluation.
+- Opponent sets are hypothetical.
+- Speed prediction is not yet integrated into decisions.
+- Full Gen 4 mechanics and information isolation remain unverified.
+- Benchmark uses only two test teams.

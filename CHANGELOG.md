@@ -20,3 +20,11 @@
 - Fixed draw detection.
 - Passed HP privacy and reproducibility tests.
 - Passed 1000-battle stress test.
+
+## Strategic AI v0.1
+- Added structured battle state.
+- Added Gen 4 damage and speed prediction.
+- Added damage-based strategic decisions.
+- Completed 4000-battle benchmark.
+- Achieved 89.9% win rate against RandomAgent.
+- Preserved v0.1 baseline and benchmark results.
