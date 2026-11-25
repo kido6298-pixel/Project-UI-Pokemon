@@ -97,3 +97,15 @@ Next:
 - Validate across diverse team compositions.
 - Complete v0.4 final benchmark.
 
+
+## Enemy inference engine - Steps 57-85
+
+- Added probabilistic enemy builds and ability candidates.
+- Added move-order and damage-based inference.
+- Added live evidence extraction and persistent enemy beliefs.
+- Added HP display inversion and defensive inference.
+- Added realistic-team validation and paired benchmarks.
+- Fixed outgoing damage statistics aggregation.
+- Completed 200 battles with zero processing errors.
+- Improved paired realistic-team MAE by 69.77%.
+- Prepared multi-build strategic integration for v0.5.

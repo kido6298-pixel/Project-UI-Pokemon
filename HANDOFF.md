@@ -261,3 +261,65 @@ Next:
 - Validate across diverse team compositions.
 - Complete v0.4 final benchmark.
 
+
+## Enemy inference engine - Steps 57-85
+
+### Completed
+- Probabilistic enemy build generation.
+- Multiple ability candidates.
+- Enemy build selection and multi-build prediction.
+- Bayesian-style updates from move order and received damage.
+- Persistent per-Pokemon evidence and probability reconstruction.
+- Live battle evidence extraction.
+- Historical battle context capture.
+- Life Orb observation and synchronization.
+- Realistic test team generation.
+- Exact HP display inversion.
+- Defensive inference from outgoing damage.
+- Integrated offensive, defensive and speed inference.
+- Paired accuracy comparison and statistics validation.
+
+### Validation
+- 200 seeded battles completed.
+- 2546 received damage observations.
+- 2546 outgoing damage observations.
+- 714 move order observations.
+- Zero processing errors and battle limits.
+- 80600 HP round-trip checks passed.
+
+### Paired accuracy
+Original test teams:
+- 497 matched Pokemon records.
+- MAE: 9.759 -> 4.988.
+- Improvement: 48.89%.
+
+Realistic test teams:
+- 491 matched Pokemon records.
+- MAE: 6.445 -> 1.949.
+- Improvement: 69.77%.
+- Improved: 437.
+- Unchanged: 47.
+- Worsened: 7.
+- All 12 tested species improved on average.
+
+### Remaining limitations
+- Fixed teams do not establish generalization.
+- Candidate EV spreads and unknown items remain incomplete.
+- Ability priors are heuristic.
+- Historical item consumption and ability changes remain incomplete.
+- Critical hits, lethal damage and complex moves are excluded.
+- Contradictions and inference runtime require further improvement.
+- Current HP must be refreshed before strategic evaluation.
+- Confidence calibration remains unverified.
+
+### Next phase
+Strategic AI v0.5:
+1. Select representative builds from posterior probabilities.
+2. Connect live inference to strategic decisions.
+3. Evaluate actions across multiple possible enemy builds.
+4. Preserve uncertainty and avoid excessive computation.
+5. Benchmark against v0.4 using identical seeds.
+6. Validate on additional teams.
+
+The existing strategic AI v0.4 remains unchanged.
+The original Project U.I. application and UserData remain untouched.

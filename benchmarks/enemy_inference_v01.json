@@ -1,0 +1,82 @@
+{
+  "phase": "Enemy inference engine",
+  "steps": "57-85",
+  "original": {
+    "simulation": {
+      "battles": 100,
+      "damageAccepted": 1173,
+      "dealtDamageAccepted": 1173,
+      "orderAccepted": 305,
+      "duplicates": 11,
+      "skipped": 76,
+      "contradictions": 77,
+      "errors": 0,
+      "inferredPokemon": 567,
+      "highConfidence": 94,
+      "limited": 0,
+      "seconds": 10.3436766
+    },
+    "accuracy": {
+      "Count": 567,
+      "Before": "10.158",
+      "After": "5.126",
+      "Improvement": "5.032",
+      "BestBuildError": "6.650",
+      "MinimumError": "0.000"
+    },
+    "paired": {
+      "PreviousRecords": 497,
+      "CurrentRecords": 567,
+      "MatchedRecords": 497,
+      "PreviousMAE": "9.759",
+      "CurrentMAE": "4.988",
+      "Improvement": "48.89%",
+      "Improved": 429,
+      "Unchanged": 54,
+      "Worsened": 14
+    }
+  },
+  "realistic": {
+    "simulation": {
+      "battles": 100,
+      "damageAccepted": 1373,
+      "dealtDamageAccepted": 1373,
+      "orderAccepted": 409,
+      "duplicates": 10,
+      "skipped": 70,
+      "contradictions": 65,
+      "errors": 0,
+      "inferredPokemon": 568,
+      "highConfidence": 231,
+      "limited": 0,
+      "seconds": 17.7952509
+    },
+    "accuracy": {
+      "Count": 568,
+      "Before": "13.119",
+      "After": "3.049",
+      "Improvement": "10.069",
+      "BestBuildError": "1.930",
+      "MinimumError": "0.310"
+    },
+    "paired": {
+      "PreviousRecords": 491,
+      "CurrentRecords": 568,
+      "MatchedRecords": 491,
+      "PreviousMAE": "6.445",
+      "CurrentMAE": "1.949",
+      "Improvement": "69.77%",
+      "Improved": 437,
+      "Unchanged": 47,
+      "Worsened": 7
+    }
+  },
+  "limitations": [
+    "Fixed test teams and seeds",
+    "Incomplete EV and item candidate coverage",
+    "Historical item and ability changes incomplete",
+    "Critical hits and lethal damage excluded",
+    "Inference confidence not calibrated",
+    "Not yet integrated into strategic decisions"
+  ]
+}

@@ -105,3 +105,17 @@ Next:
 - Validate across diverse team compositions.
 - Complete v0.4 final benchmark.
 
+
+## Enemy inference engine
+
+Status: Implemented and validated on fixed test teams.
+
+Steps 57-85 completed.
+
+Paired realistic-team MAE:
+6.445 -> 1.949 (69.77% improvement).
+
+Next: Strategic AI v0.5 integration.
+
+Inference engine is not yet used for action selection.
+Generalization and performance remain open validation tasks.
