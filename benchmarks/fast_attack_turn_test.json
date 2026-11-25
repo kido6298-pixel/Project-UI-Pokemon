@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "Cases": 10000,
+    "OutcomeChecks": 57096,
+    "Mismatches": 0,
+    "OriginalMedianMs": "43.457",
+    "FastMedianMs": "28.276",
+    "Speedup": "1.537x",
+    "Reduction": "34.93%"
+  },
+  "rounds": [
+    {
+      "Round": 1,
+      "OriginalMs": 48.524099999999976,
+      "FastMs": 31.351200000000006,
+      "Speedup": 1.5477589374569385
+    },
+    {
+      "Round": 2,
+      "OriginalMs": 41.806299999999965,
+      "FastMs": 31.727900000000034,
+      "Speedup": 1.3176510263837165
+    },
+    {
+      "Round": 3,
+      "OriginalMs": 41.638499999999965,
+      "FastMs": 27.380499999999984,
+      "Speedup": 1.5207355599788166
+    },
+    {
+      "Round": 4,
+      "OriginalMs": 43.66129999999998,
+      "FastMs": 28.27600000000001,
+      "Speedup": 1.5441116140896862
+    },
+    {
+      "Round": 5,
+      "OriginalMs": 43.45659999999998,
+      "FastMs": 27.20060000000001,
+      "Speedup": 1.5976338757233284
+    }
+  ]
+}

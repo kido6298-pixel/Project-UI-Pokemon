@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "Checks": 93972,
+    "Mismatches": 0,
+    "NormalizedRequests": 76752,
+    "ExactRequests": 17220,
+    "DamageHits": 73440,
+    "DamageMisses": 20532,
+    "HitRate": "78.15%",
+    "Seconds": "2.949"
+  },
+  "results": [
+    {
+      "Move": "Earthquake",
+      "Ability": "Sand Veil",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Dragon Claw",
+      "Ability": "Sand Veil",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Ice Beam",
+      "Ability": "Pressure",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Surf",
+      "Ability": "Natural Cure",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Bullet Punch",
+      "Ability": "Technician",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Flamethrower",
+      "Ability": "Flash Fire",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Seed Bomb",
+      "Ability": "Poison Heal",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "X-Scissor",
+      "Ability": "Technician",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Shadow Ball",
+      "Ability": "Levitate",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Thunderbolt",
+      "Ability": "Pressure",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Meteor Mash",
+      "Ability": "Clear Body",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Body Slam",
+      "Ability": "Thick Fat",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Crunch",
+      "Ability": "Sand Stream",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Stone Edge",
+      "Ability": "Sand Stream",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Waterfall",
+      "Ability": "Intimidate",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Ice Fang",
+      "Ability": "Intimidate",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Earth Power",
+      "Ability": "Flash Fire",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Heat Wave",
+      "Ability": "Pressure",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Mach Punch",
+      "Ability": "Poison Heal",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Flamethrower",
+      "Ability": "Blaze",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Surf",
+      "Ability": "Torrent",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Seed Bomb",
+      "Ability": "Overgrow",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "X-Scissor",
+      "Ability": "Swarm",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Eruption",
+      "Ability": "Blaze",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Water Spout",
+      "Ability": "Water Veil",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Reversal",
+      "Ability": "Guts",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Brine",
+      "Ability": "Torrent",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Crush Grip",
+      "Ability": "Slow Start",
+      "Checks": 3444,
+      "Mismatches": 0
+    }
+  ],
+  "failures": []
+}

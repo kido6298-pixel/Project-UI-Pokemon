@@ -1,0 +1,11 @@
+{
+  "Battles": 20,
+  "DecisionChecks": 190,
+  "CandidateChecks": 680,
+  "BuildChecks": 661,
+  "Mismatches": 0,
+  "BeforeSeconds": "74.047",
+  "AfterSeconds": "34.847",
+  "Speedup": "2.125x",
+  "Reduction": "52.94%"
+}

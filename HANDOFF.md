@@ -323,3 +323,135 @@ Strategic AI v0.5:
 
 The existing strategic AI v0.4 remains unchanged.
 The original Project U.I. application and UserData remain untouched.
+
+## Strategic AI v0.5 - STEP 88-113
+
+### Current recommended agent
+
+- src/agents/strategic_agent_v05_optimized.js
+- Export: StrategicAgentV05Optimized
+- Original and intermediate agents are retained for comparison.
+
+### Enemy build inference integration
+
+- Posterior build selection using probability and coverage.
+- Maximum selected builds: 5.
+- Target probability coverage: 0.95.
+- Selected probabilities are renormalized.
+- Current HP reconstructed from displayed HP percentage.
+- Current status, boosts, known item and ability refreshed.
+- Prior build estimation used when evidence is unavailable.
+- Multiple enemy builds evaluated through adaptive two-turn search.
+- Build risk weight: 0.25.
+- Action risk weight: 0.5.
+- Second-turn discount: 0.85.
+- Switching penalties inherited from optimized v0.4.
+
+### Performance optimization
+
+1. Exact calculation caching.
+2. HP-independent damage cache normalization.
+3. Lightweight cloning for damage results.
+4. Fast attack-turn outcome aggregation.
+
+Important modules:
+
+- calculation_cache.js
+- cached_calculations.js
+- hp_dependencies.js
+- hp_cached_calculations.js
+- fast_calculation_cache.js
+- fast_hp_cached_calculations.js
+- attack_turn_fast.js
+- attack_prediction_fast.js
+- adaptive_prediction_fast.js
+- multi_build_prediction_fast.js
+
+### Integration benchmark
+
+Same 20 seeded battles against Strategic AI v0.4.
+
+- Wins: 11
+- Losses: 8
+- Draws: 1
+- Search decisions: 190
+- Posterior uses: 142
+- Prior uses: 48
+- Selected builds: 661
+- Average builds: 3.478947
+- Average probability coverage: 82.6601%
+- Search evaluations: 950938
+- Voluntary search switches: 42
+- Search errors: 0
+- Inference errors: 0
+- Fallbacks: 0
+- Turn-limited battles: 0
+
+Normal execution times:
+
+- Original v0.5: 73.456 seconds
+- Basic cache: 50.769 seconds
+- HP-independent cache: 43.274 seconds
+- Lightweight cache: 37.360 seconds
+- Optimized integration: 34.847 seconds
+
+Optimized version:
+
+- Approximately 2.108x faster than original normal execution.
+- Approximately 52.56% reduction in total runtime.
+- Approximately 1.742 seconds per battle.
+- Damage cache hit rate: 86.0579%.
+- Speed cache hit rate: 98.8521%.
+- No cache evictions in the integration benchmark.
+
+### Exact equivalence verification
+
+- Battles: 20
+- Decision checks: 190
+- Candidate checks: 680
+- Build checks: 661
+- Mismatches: 0
+
+The equivalence report uses a profiled original run of
+74.047 seconds and reports 2.125x speedup.
+Normal execution comparison is approximately 2.108x.
+
+### Unit verification
+
+- HP independence: 63468 checks.
+- HP cache equality: 93972 checks.
+- Lightweight cache equality: 6000 checks.
+- Lightweight cache microbenchmark: 5.994x.
+- Attack-turn equality: 10000 cases.
+- Attack-turn outcomes: 57096 checks.
+- Attack-turn microbenchmark: 1.537x.
+- Mutation protection and LRU behavior verified.
+
+### Known limitations
+
+- Integration equivalence covers only the tested teams and seeds.
+- Competitive strength requires larger independent benchmarks.
+- Posterior build probabilities may remain stale after newly
+  revealed items or abilities until additional evidence is processed.
+- Enemy HP uses a midpoint estimate.
+- Consumed items and unknown items require better distinction.
+- Candidate builds and move hypotheses are incomplete.
+- Second-turn search can be optimistic across hidden builds.
+- Status moves, setup moves and complex damage mechanics are incomplete.
+- Team preview selection is not yet strategic.
+- Full Battle Revolution rule compatibility is not verified.
+- Parallel simulation and self-learning are not implemented.
+- Some comparison tests require locally generated logs.
+
+### Next development steps
+
+1. Deterministic parallel battle simulation using worker_threads.
+2. Compare sequential and parallel battle results.
+3. Benchmark worker counts and memory consumption.
+4. Expand v0.5 strength validation.
+5. Implement v0.6 status moves, setup and board control.
+6. Implement v0.7 team selection and selection pressure.
+7. Implement v0.8 opponent action prediction.
+8. Develop comprehensive strategic AI and self-play learning.
+9. Integrate with Project U.I. after independent validation.
+

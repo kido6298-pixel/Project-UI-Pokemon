@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "EqualityChecks": 6000,
+    "Mismatches": 0,
+    "IterationsPerRound": 200000,
+    "Rounds": 5,
+    "OriginalMedianMs": "485.238",
+    "FastMedianMs": "80.954",
+    "Speedup": "5.994x",
+    "Reduction": "83.32%"
+  },
+  "rounds": [
+    {
+      "Round": 1,
+      "OriginalMs": 487.03869999999995,
+      "FastMs": 82.17560000000003,
+      "Speedup": 5.926804306874544
+    },
+    {
+      "Round": 2,
+      "OriginalMs": 483.8868,
+      "FastMs": 82.10680000000002,
+      "Speedup": 5.893382764886707
+    },
+    {
+      "Round": 3,
+      "OriginalMs": 487.1902,
+      "FastMs": 80.95409999999993,
+      "Speedup": 6.018104086142647
+    },
+    {
+      "Round": 4,
+      "OriginalMs": 484.4305999999997,
+      "FastMs": 80.72859999999991,
+      "Speedup": 6.000730843839732
+    },
+    {
+      "Round": 5,
+      "OriginalMs": 485.2383,
+      "FastMs": 79.71189999999979,
+      "Speedup": 6.087401002861571
+    }
+  ]
+}

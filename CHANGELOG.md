@@ -109,3 +109,33 @@ Next:
 - Completed 200 battles with zero processing errors.
 - Improved paired realistic-team MAE by 69.77%.
 - Prepared multi-build strategic integration for v0.5.
+
+## Strategic AI v0.5 optimized
+
+### Added
+- Posterior build selection and live build refresh.
+- Multi-build strategic agent v0.5.
+- Exact calculation cache.
+- HP dependency analysis and normalized damage cache.
+- Lightweight cache implementation.
+- Optimized attack-turn evaluation.
+- Intermediate and optimized agent variants.
+- Unit tests, integration tests and benchmark snapshots.
+
+### Fixed
+- Floating-point HP percentage precision in posterior refresh.
+
+### Performance
+- Original normal execution: 73.456s / 20 battles.
+- Optimized execution: 34.847s / 20 battles.
+- Approximately 2.108x speedup.
+- Exact equivalence confirmed for tested decisions and scores.
+
+### Remaining
+- Parallel simulation.
+- Larger strength benchmarks.
+- Status moves and setup strategy.
+- Strategic team selection.
+- Opponent action prediction.
+- Self-play learning.
+

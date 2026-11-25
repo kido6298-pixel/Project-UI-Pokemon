@@ -119,3 +119,34 @@ Next: Strategic AI v0.5 integration.
 
 Inference engine is not yet used for action selection.
 Generalization and performance remain open validation tasks.
+
+## Strategic AI v0.5 optimized - STEP 113
+
+Status: implementation and initial integration tests completed.
+
+Recommended agent:
+src/agents/strategic_agent_v05_optimized.js
+
+Completed:
+- Posterior enemy build integration.
+- Multi-build adaptive search.
+- Exact calculation caching.
+- HP-independent damage caching.
+- Lightweight cache cloning.
+- Fast attack-turn aggregation.
+- Seeded integration and exact equivalence verification.
+
+Benchmark:
+- 20 battles: 11 wins, 8 losses, 1 draw against v0.4.
+- 950938 search evaluations.
+- 190 decisions, 680 candidates, 661 builds checked.
+- Zero equivalence mismatches.
+- Normal runtime reduced from 73.456s to 34.847s.
+- Approximately 2.108x speedup.
+
+Next milestone:
+Deterministic multi-core parallel battle simulation.
+
+Remaining strategic features and limitations are documented
+in HANDOFF.md.
+

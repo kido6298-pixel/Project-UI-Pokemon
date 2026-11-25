@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "Moves": 19,
+    "Defenders": 12,
+    "Fields": 6,
+    "Checks": 63468,
+    "Mismatches": 0,
+    "Skipped": 0,
+    "Seconds": "1.401"
+  },
+  "results": [
+    {
+      "Move": "Earthquake",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Dragon Claw",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Ice Beam",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Surf",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Bullet Punch",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Flamethrower",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Seed Bomb",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "X-Scissor",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Shadow Ball",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Thunderbolt",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Meteor Mash",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Body Slam",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Crunch",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Stone Edge",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Waterfall",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Ice Fang",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Earth Power",
+      "Checks": 2952,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Heat Wave",
+      "Checks": 3444,
+      "Mismatches": 0
+    },
+    {
+      "Move": "Mach Punch",
+      "Checks": 3444,
+      "Mismatches": 0
+    }
+  ],
+  "failures": []
+}
