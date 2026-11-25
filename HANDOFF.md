@@ -212,3 +212,52 @@ Next:
 - Implement strategic team selection.
 - Develop self-play learning.
 
+
+## Strategic AI v0.4 - Two-turn search milestone
+
+Implemented:
+- Board value evaluation and partial-information board state.
+- Probabilistic attack and switch prediction.
+- Adaptive two-turn action search.
+- Unknown enemy attack candidate estimation.
+- Entry hazard normalization.
+- Strategic voluntary switching.
+
+Initial integration:
+- 20 battles, 8 wins, 12 losses.
+- 207444 search evaluations.
+- Average decision time: 76.21 ms.
+- Zero errors, fallbacks or turn limits.
+
+Switch optimization:
+- 700 training battles across seven variants.
+- 1000 independent validation battles across five variants.
+- Model E selected provisionally.
+- Switch penalty: 0.30.
+- Consecutive switch penalty: 0.50.
+- Validation: 118 wins, 81 losses, 1 draw.
+- Validation score: 59.25%.
+- Baseline validation score: 52.50%.
+- No-switch validation score: 52.75%.
+- Model E consecutive switches: 0.
+- Model E validation switch rate: 17.40%.
+
+Reproducibility:
+- Original v0.4 preserved as strategic_agent_v04_baseline.js.
+- Optimization and validation scripts reference the frozen baseline.
+- Aggregate benchmark results saved under benchmarks.
+
+Limitations:
+- Fixed test teams only.
+- Enemy configuration uses a single estimated build.
+- Enemy move probabilities are heuristic.
+- Opponent switching and status moves are not modeled.
+- No autonomous learning yet.
+- Statistical significance has not been established.
+
+Next:
+- Improve enemy build and move estimation.
+- Optimize risk weight and search discount.
+- Validate across diverse team compositions.
+- Complete v0.4 final benchmark.
+
