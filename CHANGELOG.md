@@ -1,0 +1,4 @@
+﻿- Verified custom Generation IV singles 6-to-3 rules.
+- Completed automated 3v3 battle.
+- Verified forced switching and weather effects.
+- Added local battle log output.
