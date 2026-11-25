@@ -6,8 +6,11 @@
 } = require('pokemon-showdown');
 
 const FORMAT = Dex.formats.validate(
-    'gen4customgame@@@Team Preview,Min Team Size = 6,!! Max Team Size = 6,Picked Team Size = 3,!! Max Level = 50,!! Default Level = 50'
+    'gen4customgame@@@HP Percentage Mod,Team Preview,Min Team Size = 6,!! Max Team Size = 6,Picked Team Size = 3,!! Max Level = 50,!! Default Level = 50'
 );
+
+
+
 
 async function simulate({
     team1,
@@ -36,7 +39,12 @@ async function simulate({
                     throw new Error(name + ': ' + line);
                 }
 
-                if (!line.startsWith('|request|')) continue;
+                if (!line.startsWith('|request|')) {
+                    if (typeof agent.observe === 'function') {
+                        await agent.observe(line);
+                    }
+                    continue;
+                }
 
                 const raw = line.slice(9);
                 if (!raw || raw === 'null') continue;
@@ -79,7 +87,7 @@ async function simulate({
                     winner = line.split('|')[2];
                 }
 
-                if (line.startsWith('|tie|')) {
+                if (line === '|tie' || line.startsWith('|tie|')) {
                     winner = 'DRAW';
                 }
             }
@@ -97,7 +105,17 @@ async function simulate({
         if (seed) options.seed = seed;
 
         await streams.omniscient.write(
-            '>start ' + JSON.stringify(options) + '\n' +
+            '>start ' + JSON.stringify(options)
+        );
+
+        if (!battle.battle) {
+            throw new Error('Battle instance unavailable');
+        }
+
+        battle.battle.reportExactHP = false;
+        battle.battle.reportPercentages = true;
+
+        await streams.omniscient.write(
             '>player p1 ' + JSON.stringify({
                 name: 'AI-1',
                 team: Teams.pack(team1)
@@ -111,7 +129,10 @@ async function simulate({
         await tasks;
 
         if (!winner) {
-            throw new Error('Battle ended without a result');
+            const error = new Error('Battle ended without a result');
+            error.battleLog = log.join('\n');
+            error.decisions = decisions;
+            throw error;
         }
 
         return {
@@ -147,4 +168,9 @@ async function simulate({
 }
 
 module.exports = { simulate };
+
+
+
+
+
 

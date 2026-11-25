@@ -65,3 +65,14 @@
 5. Seeded comparative evaluation.
 6. Team selection and construction optimization.
 7. Experience database and strategy improvement.
+
+## Player-visible information and stability
+- Added agent.observe() for player-specific battle events.
+- Configured opponent HP percentage reporting.
+- Preserved exact HP for the player's own Pokemon.
+- Fixed bare tie event recognition.
+- Added diagnostic logs for missing battle results.
+- Passed 1000 seeded battles with zero errors.
+- Benchmark: 187.6 battles/second.
+- Next: implement structured battle state.
+- Full hidden-information isolation and Battle Revolution fidelity remain unverified.

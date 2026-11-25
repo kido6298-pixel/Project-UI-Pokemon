@@ -13,3 +13,10 @@
 - Completed 100 battles without errors.
 - Measured 139.4 battles per second.
 - Verified seeded battle reproducibility.
+
+## Player observation
+- Added player-specific observation interface.
+- Corrected HP reporting configuration.
+- Fixed draw detection.
+- Passed HP privacy and reproducibility tests.
+- Passed 1000-battle stress test.
