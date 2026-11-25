@@ -163,3 +163,52 @@
 - Improve forced switch decisions.
 - Prevent unnecessary switching loops.
 - Benchmark against frozen v0.1 and v0.2 agents.
+
+## Strategic AI v0.3
+
+Completed:
+- Switch-in damage evaluation
+- Generation 4 entry hazard evaluation
+- Offensive matchup and speed evaluation
+- Integrated switch value evaluation
+- Strategic forced replacement
+- Experimental voluntary switching
+- Basic consecutive-switch suppression
+
+Benchmark:
+- Optimization: 5,200 battles
+- Validation: 8,000 battles
+- Total: 13,200 battles
+- Turn-limit terminations: 0
+
+Validation results against v0.2:
+- Forced replacement only: 52.775% score
+- Conservative switching A: 52.40%
+- Conservative switching B: 52.35%
+- Initial v0.3: 50.25%
+
+Adopted policy:
+- Keep v0.2 attack selection.
+- Optimize forced replacement.
+- Disable voluntary switching by default.
+- Preserve experimental switching implementation.
+
+Limitations:
+- Fixed test teams only.
+- General strength improvement is not established.
+- Unknown enemy moves are not predicted.
+- Switch-in abilities are not fully modeled.
+- Multi-turn search is not implemented.
+- Evaluation weights are heuristic, not learned.
+- Entry hazard integration requires live battle verification.
+- Voluntary switching requires a better evaluation model.
+
+Next:
+- Improve battle evaluation and material preservation.
+- Implement multi-turn action comparison.
+- Reintroduce strategic voluntary switching.
+- Add status and setup move evaluation.
+- Expand benchmark team diversity.
+- Implement strategic team selection.
+- Develop self-play learning.
+

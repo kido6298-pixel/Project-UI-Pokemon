@@ -37,3 +37,14 @@
 - Achieved 50.65% win rate against v0.1.
 - Achieved 90.65% win rate against RandomAgent.
 - Preserved v0.2 benchmark results.
+
+## Strategic AI v0.3
+
+- Added switch safety and entry hazard evaluation.
+- Added offensive matchup evaluation.
+- Added integrated switch value evaluation.
+- Added strategic forced replacement.
+- Tested 13,200 battles across switch policies.
+- Selected forced replacement optimization as default.
+- Preserved experimental voluntary switching.
+

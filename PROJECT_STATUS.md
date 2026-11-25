@@ -47,3 +47,12 @@
 - Strength improvement: preliminary.
 - Next: v0.3 strategic switching.
 - Self-learning: not started.
+
+## Strategic AI v0.3 status
+
+Switch evaluation foundation completed.
+13,200 optimization and validation battles completed.
+Forced replacement optimization selected as default.
+Voluntary switching preserved as experimental functionality.
+Next priority: improve multi-turn decision evaluation.
+
