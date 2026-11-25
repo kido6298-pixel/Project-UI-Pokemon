@@ -1,0 +1,24 @@
+{
+  "name": "project-ui-pokemon",
+  "version": "1.0.0",
+  "description": "Generation IV Pokemon Battle Simulation and AI Learning System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kido6298-pixel/Project-UI-Pokemon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kido6298-pixel/Project-UI-Pokemon/issues"
+  },
+  "homepage": "https://github.com/kido6298-pixel/Project-UI-Pokemon#readme",
+  "dependencies": {
+    "pokemon-showdown": "0.11.11"
+  }
+}
