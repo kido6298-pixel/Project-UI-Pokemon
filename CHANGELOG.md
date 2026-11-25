@@ -28,3 +28,12 @@
 - Completed 4000-battle benchmark.
 - Achieved 89.9% win rate against RandomAgent.
 - Preserved v0.1 baseline and benchmark results.
+
+## Strategic AI v0.2
+- Added exact own Pokemon stat reconstruction.
+- Added incoming damage and action order evaluation.
+- Added pre-action knockout risk scoring.
+- Completed 6000-battle benchmark without errors.
+- Achieved 50.65% win rate against v0.1.
+- Achieved 90.65% win rate against RandomAgent.
+- Preserved v0.2 benchmark results.

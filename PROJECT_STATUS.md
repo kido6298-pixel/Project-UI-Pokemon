@@ -40,3 +40,10 @@
 - Baseline win rate against RandomAgent: 89.9%.
 - Next milestone: Strategic AI v0.2.
 - Learning and team optimization: not started.
+
+## Strategic AI v0.2 milestone
+- Implementation: complete.
+- Benchmark: passed.
+- Strength improvement: preliminary.
+- Next: v0.3 strategic switching.
+- Self-learning: not started.

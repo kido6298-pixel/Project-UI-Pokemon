@@ -115,3 +115,51 @@
 - Speed prediction is not yet integrated into decisions.
 - Full Gen 4 mechanics and information isolation remain unverified.
 - Benchmark uses only two test teams.
+
+## Strategic AI v0.2 milestone
+
+### Completed
+- Exact stat reconstruction module.
+- Stat reconstruction test: 5832 values, zero errors.
+- Live stat verification: 22792 values, zero errors.
+- Damaged Pokemon HP verification: 2378 checks.
+- Incoming damage prediction.
+- Speed and move priority integration.
+- Pre-action knockout risk evaluation.
+- Strategic AI v0.2 implementation.
+
+### Benchmark
+- Total battles: 6000
+- Errors: 0
+- Turn limits: 0
+- V0.2 vs V0.1 wins: 1013
+- Losses: 971
+- Draws: 16
+- Win rate: 50.65%
+- Score rate: 51.05%
+- V0.2 vs Random: 90.65%
+- V0.1 vs Random: 89.90%
+- Team 1 improvement: +0.3 percentage points
+- Team 2 improvement: +1.4 percentage points
+- Threat evaluations: 366850
+- Risk decisions: 5590
+- Fallbacks: 0
+- Total runtime: 47.35 seconds
+
+### Limitations
+- Improvement is small and not statistically established.
+- Opponent move prediction is limited to revealed moves.
+- Opponent offensive scenarios are heuristic.
+- No strategic voluntary switching.
+- Forced switches and team selection remain random.
+- Full Gen 4 damage accuracy remains unverified.
+- Only two test teams have been benchmarked.
+
+### Next: Strategic AI v0.3
+- Evaluate incoming damage after switching.
+- Evaluate defensive type compatibility.
+- Evaluate entry hazards.
+- Evaluate offensive pressure after switching.
+- Improve forced switch decisions.
+- Prevent unnecessary switching loops.
+- Benchmark against frozen v0.1 and v0.2 agents.
