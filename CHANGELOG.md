@@ -139,3 +139,74 @@ Next:
 - Opponent action prediction.
 - Self-play learning.
 
+
+
+## STEP 116-135: Parallel simulation and isolated Pokemon knowledge
+
+### Completed
+
+- Parallel battle execution using worker threads.
+- Default worker count: 8.
+- Generic battle task and agent factory.
+- Persistent JSONL battle results.
+- Batch interruption and resume.
+- Result integrity and duplicate protection.
+- Battle statistics analysis.
+- SQLite Pokemon knowledge database.
+- Read-only research query interface.
+- Knowledge quality and evidence management.
+- Manual approval and revocation.
+- Knowledge audit history.
+- Optional chat gateway, disabled by default.
+
+### Verified results
+
+- Strategic batch: 100 battles.
+- V05: 53 wins.
+- V04: 47 wins.
+- Draws: 0.
+- Search and inference errors: 0.
+- Fallbacks: 0.
+- Limited battles: 0.
+- Batch execution: approximately 45.4 seconds.
+- Peak RSS: approximately 2134 MB.
+- Initial knowledge database: 73728 bytes.
+- Production approved claims: 0.
+- Production chat gateway: OFF.
+
+### Isolation policy
+
+- Pokemon knowledge must remain independent of Project U.I.
+- Never automatically copy Pokemon research into ui_memory.db.
+- Research queries are not approved chat knowledge.
+- Knowledge states: research, review, approved, revoked.
+- Only manually approved claims may pass the chat gateway.
+- Revoked claims cannot be retrieved through the gateway.
+- The gateway defaults to OFF after process restart.
+- Disabled gateway does not open the knowledge database.
+- Database failures return no knowledge.
+- Main Project U.I. integration remains deferred.
+
+### Known limitations
+
+- Manual approval actor is not authenticated.
+- Knowledge correctness is not automatically verified.
+- Gateway disconnection cannot erase previously retrieved data.
+- Main chat memory-write restrictions are not yet enforced.
+- Full battle task definitions are not persisted in the manifest.
+- Engine version is supplied by the caller.
+- Stale batch locks may require manual recovery.
+- Enemy statistics describe decisions, not Pokemon win rates.
+- The 100-battle result does not establish V05 superiority.
+- Self-learning and team optimization remain unimplemented.
+
+### Next development
+
+1. Resume strategic AI development independently.
+2. Improve status moves, setup moves and board control.
+3. Develop strategic AI V06.
+4. Benchmark against previous AI versions.
+5. Improve team selection and opponent prediction.
+6. Implement self-play learning and team optimization.
+7. Integrate with Project U.I. only after explicit approval.
+
