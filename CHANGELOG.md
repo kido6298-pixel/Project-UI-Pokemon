@@ -210,3 +210,179 @@ Next:
 6. Implement self-play learning and team optimization.
 7. Integrate with Project U.I. only after explicit approval.
 
+
+
+## STEP 137-163: Strategic AI v0.6 foundations
+
+### Development status
+
+- Strategic AI v0.5 remains the stable baseline.
+- v0.6 foundation modules have been implemented separately.
+- No v0.6 agent has been connected to the production simulator.
+- All 17 v0.6 foundation test scripts passed.
+- These results establish unit-level correctness only.
+- Competitive strength improvement has not yet been measured.
+
+### Implemented modules
+
+#### Board evaluation and setup
+
+- boost_value.js
+- board_value_v06.js
+- status_move_effects.js
+
+Features:
+
+- Gen IV stat stage multipliers and stage limits.
+- HP-adjusted boost valuation.
+- Physical and special attack profile adjustment.
+- Calm Mind, Swords Dance, Dragon Dance.
+- Nasty Plot, Bulk Up, Agility and non-Ghost Curse.
+- Standard immediate recovery moves.
+- Provisional board evaluation coefficients.
+- Roost timing effects remain unsupported.
+
+#### Turn prediction and status mechanics
+
+- turn_prediction_v06.js
+- status_residual.js
+- status_action.js
+- sleep_prediction.js
+- status_action_v06.js
+- status_switch_v06.js
+- status_infliction.js
+- turn_prediction_v06_integrated.js
+- end_turn_v06.js
+- turn_prediction_v06_full.js
+
+Features:
+
+- Probability-based action order and damage outcomes.
+- Damage recalculation after stat changes.
+- Recovery before or after incoming damage.
+- Paralysis, freeze and sleep action probabilities.
+- Normal sleep, Rest sleep duration and Early Bird.
+- Gen IV Magic Guard paralysis behavior.
+- Burn, poison and escalating toxic damage.
+- Toxic counter reset on switching.
+- Status infliction and basic immunity checks.
+- Weather damage and weather-related abilities.
+- Leftovers, Black Sludge and status orbs.
+- Lum Berry and Chesto Berry.
+- Shed Skin probability branches.
+- Weather suppression.
+- Corrected toxic rounding in end_turn_v06.js.
+
+#### Field control and hazards
+
+- field_control_v06.js
+- hazard_value_v06.js
+- hazard_removal_v06.js
+
+Features:
+
+- Stealth Rock, Spikes and Toxic Spikes.
+- Hazard layer limits.
+- Haze stat stage reset.
+- Reserve Pokemon hazard pressure evaluation.
+- Rapid Spin hazard removal.
+- Grounded Poison Pokemon Toxic Spikes absorption.
+- Provisional future entry probability of 0.7.
+
+#### Move restrictions
+
+- move_restriction_v06.js
+
+Features:
+
+- Gen IV Taunt duration branches: 3-5 turns.
+- Gen IV Encore duration branches: 4-8 turns.
+- Status move restriction.
+- Encore move override.
+- Last move and PP validation.
+- Restriction expiration and switch reset.
+- Oblivious does not prevent Taunt in Gen IV.
+- Mental Herb does not cure Taunt or Encore in Gen IV.
+
+#### Screens
+
+- screen_control_v06.js
+
+Features:
+
+- Reflect and Light Screen.
+- Standard duration of 5 turns.
+- Light Clay duration of 8 turns.
+- Item suppression and Klutz handling.
+- Physical and special damage separation.
+- Critical and fixed damage bypass.
+- Screen expiration and removal.
+- Damage calculator field adapter.
+
+#### Switching and forced switching
+
+- switch_control_v06.js
+
+Features:
+
+- Shared switch-out and switch-entry prediction.
+- Roar and Whirlwind priority of -6.
+- Uniform probability branches over eligible reserves.
+- Stat stage and move restriction reset.
+- Toxic counter reset.
+- Natural Cure on switching out.
+- Entry hazard damage and Toxic Spikes absorption.
+- Entry status and immediate berry consumption.
+- Suction Cups, Soundproof and Ingrain checks.
+- Basic Mold Breaker interaction.
+- Entry KO detection and pending action cancellation flag.
+
+### Known limitations
+
+- Individual mechanics are not yet fully integrated.
+- Existing hazard evaluation requires Gen IV parity review.
+- Magic Guard Toxic Spikes immunity needs correction.
+- Toxic rounding differs between the legacy residual module
+  and the corrected end-turn module.
+- Exact inter-Pokemon residual event order is not implemented.
+- Weather and screen duration tracking require integration.
+- Accuracy and evasion stage effects remain incomplete.
+- Critical hits and secondary attack effects remain incomplete.
+- Confusion and several other volatile effects remain unsupported.
+- PP consumption and Struggle transitions remain incomplete.
+- Encore and Taunt interaction requires engine parity testing.
+- Entry abilities such as Intimidate and Sand Stream
+  are not implemented in the shared switch predictor.
+- Entry KO replacement chains are not implemented.
+- Brick Break screen removal timing is not integrated.
+- Rapid Spin substitute and other special cases need review.
+- Hazard entry order and absorption require engine validation.
+- Opponent reserve information must remain observation-safe.
+- Move legality and complete Battle Revolution rule parity
+  are not yet established.
+- Evaluation weights are provisional.
+- No self-learning or knowledge approval is performed.
+
+### Next development phase
+
+1. Integrate field control into the v0.6 turn predictor.
+2. Integrate move restrictions and screen timing.
+3. Integrate voluntary and forced switching.
+4. Correct identified Gen IV mechanics discrepancies.
+5. Implement whole-team board evaluation.
+6. Implement multi-action and two-turn prediction.
+7. Connect a separate StrategicAgent v0.6.
+8. Validate against Pokemon Showdown Gen IV engine.
+9. Benchmark against frozen StrategicAgent v0.5.
+10. Optimize performance and validate on held-out teams.
+
+### Isolation policy
+
+- Preserve v0.5 as a rollback baseline.
+- Do not modify the main Project U.I. application.
+- Do not modify the main conversation memory database.
+- Keep Pokemon research data and approved knowledge separate.
+- Pokemon chat gateway remains disabled by default.
+- Do not commit local databases, logs or temporary backups.
+- Do not approve knowledge automatically.
+
