@@ -482,3 +482,34 @@ Keep the simulator and real-game adapter independent.
 Preserve the ability to disable the Pokemon feature.
 
 Resume v0.6 strategic development after the integration checkpoint.
+
+## STEP 242 checkpoint
+
+Dolphin integration: IN DEVELOPMENT.
+
+Completed:
+- Basic capture and controller operation.
+- Preliminary team recognition and manual resolution.
+- Dedicated v0.5-based Dolphin agent.
+- Hidden Power calculation.
+- Decision guard.
+- Offline screenshot-to-decision connection.
+
+Validated:
+- Agent scenarios: 6/6.
+- Decision guard: 10/10.
+- Screenshot replay: 3/3.
+- Enemy HP sensitivity: detected.
+
+Pending:
+- Live decision pipeline.
+- Reliable live battle state.
+- Guarded automatic execution.
+- Full autonomous offline battle.
+- Automatic team selection.
+- Project U.I. commentary.
+
+Automatic execution remains disabled.
+Recognition assets and individual team data remain local.
+Original simulation AI and main Project U.I. are preserved.
+

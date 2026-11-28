@@ -787,3 +787,75 @@ Keep the simulator and real-game adapter independent.
 Preserve the ability to disable the Pokemon feature.
 
 Resume v0.6 strategic development after the integration checkpoint.
+
+## STEP 185-242: Dolphin integration checkpoint
+
+### Objective
+Connect the Generation IV strategic battle AI to Pokemon Battle
+Revolution through Dolphin using visible game information only.
+
+### Implemented
+- Dolphin window capture and normalized 1000x800 viewport.
+- Keyboard controller with foreground and enable guards.
+- Battle command, move, switch and switch confirmation recognition.
+- Move cursor navigation and execution.
+- Battle screen transition observation.
+- Preliminary own HP, enemy HP and Pokemon recognition.
+- Pre-battle six-Pokemon stats and move image scanning.
+- Stats, identity, ability, item, move and PP recognition.
+- Team scan, manual overrides, resolution and AI input conversion.
+- Dedicated Dolphin strategic agent generated from v0.5.
+- Hidden Power type and power support.
+- Decision guard and offline screenshot replay.
+
+### Manual supplements
+- Tyranitar actual level 50 stats.
+- Hidden Power type and power for three team members.
+- Unrecognized fields must not be silently guessed.
+
+### Validation
+- Hidden Power calculation and damage adapter: PASS.
+- Dolphin strategic agent: 6/6 scenarios.
+- Search errors, inference errors and fallbacks: zero in those tests.
+- Average synthetic decision time: 522.9 ms.
+- Decision guard: 10/10.
+- Saved screenshot replay: 3/3.
+- Average replay decision time: approximately 111 ms.
+- Enemy HP sensitivity: five distinct Earthquake scores
+  across five tested HP values.
+- Controller operations during replay: zero.
+
+### Local data
+Runtime data is excluded from Git.
+Recognition templates are backed up under:
+data/dolphin/checkpoint_backups/
+
+Restore template directories into data/dolphin/.
+Screenshots, team data and manual overrides remain local.
+Template backup alone does not reproduce all replay tests.
+
+### Limitations
+- Recognition is restricted to the current template library.
+- Own battle HP digit coverage is incomplete.
+- PP recognition is not fully validated for changing live PP.
+- Enemy HP is approximate.
+- Unknown Pokemon and nicknames require further handling.
+- Status, boosts, weather and battle history are incomplete.
+- Replay uses assumed bench HP and initial PP.
+- Equal scores at 100 and 82 percent HP in the initial replay
+  remain unexplained; later HP sensitivity was confirmed.
+- Strategic AI v0.6 is not yet integrated.
+- Autonomous execution is not authorized.
+- No complete autonomous battle has been demonstrated.
+- Main Project U.I. and its memory remain unchanged.
+
+### Next work
+1. Live screenshot to AI decision in read-only mode.
+2. Complete battle-state and legal-action verification.
+3. Guarded move and switch execution.
+4. Turn progression and persistent battle state.
+5. Forced replacement and battle-end handling.
+6. Offline autonomous battle validation.
+7. Team selection and commentary integration.
+8. Consensual private online testing after offline validation.
+

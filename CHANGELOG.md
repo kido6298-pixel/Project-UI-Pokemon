@@ -397,3 +397,24 @@ Features:
 - Preserve regression report and document limitations.
 - Prepare independent Battle Revolution integration phase.
 - Keep v0.5 and Project U.I. main application unchanged.
+
+## STEP 185-242 - Dolphin integration checkpoint
+
+Added:
+- Dolphin capture, viewport and controller adapters.
+- Battle screen and cursor recognition.
+- Team stats, identity, move and PP recognition.
+- Manual team data overrides and AI conversion.
+- Dolphin-specific strategic agent and damage adapter.
+- Hidden Power metadata and calculation support.
+- Decision guard and screenshot replay validation.
+- Local recognition template backup procedure.
+
+Validation:
+- Dolphin agent: 6/6.
+- Decision guard: 10/10.
+- Screenshot replay: 3/3.
+- Enemy HP sensitivity confirmed.
+
+Autonomous execution and Project U.I. integration remain pending.
+
