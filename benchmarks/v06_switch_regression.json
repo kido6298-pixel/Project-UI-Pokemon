@@ -1,0 +1,179 @@
+﻿{
+    "step":  "183-F",
+    "total":  34,
+    "passed":  34,
+    "failed":  0,
+    "seconds":  9.7116084999999988,
+    "results":  [
+                    {
+                        "test":  "boost_value_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "end_turn_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "entry_ability_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "entry_integration_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "entry_sequence_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "field_control_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "hazard_removal_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "hazard_value_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "move_restriction_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "party_state_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "pursuit_corrected_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "pursuit_damage_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "pursuit_interception_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "pursuit_switch_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "replacement_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "resolved_ability_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "screen_control_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "sleep_prediction_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "status_action_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "status_infliction_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "status_integration_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "status_move_effects_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "status_residual_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "switch_control_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_ability_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_control_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_field_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_forced_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_full_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_integrated_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_party_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_pursuit_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_restricted_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    },
+                    {
+                        "test":  "turn_prediction_v06_test.js",
+                        "passed":  true,
+                        "exitCode":  0
+                    }
+                ]
+}

@@ -702,3 +702,88 @@ Features:
 - Do not commit local databases, logs or temporary backups.
 - Do not approve knowledge automatically.
 
+
+
+## STEP 164-184: Strategic AI v0.6 switch mechanics checkpoint (2026-11-28)
+
+### Completed
+- Field and hazard prediction integration.
+- Reflect, Light Screen, Brick Break and Rapid Spin.
+- Taunt, Encore and move restrictions.
+- Party state and reserve management.
+- Voluntary and forced switching.
+- Fainted Pokemon replacement.
+- Entry hazards and Toxic Spikes correction.
+- Entry abilities and weather activation.
+- Intimidate, Download and Trace handling.
+- Entry ability ordering and speed ties.
+- Weather suppression and effective weather.
+- Resolved ability damage calculation.
+- Pursuit interception before switching.
+- Selected replacement preservation after Pursuit KO.
+- Pursuit integration with entry abilities and hazards.
+- Gen 4 Pursuit interception eligibility correction.
+- Paralysis bypass during Pursuit interception.
+- Sleep and freeze interception exclusion.
+- Truant interception eligibility check.
+- Pursuit interception accuracy correction.
+
+### Latest implementation entry point
+- src/turn_prediction_v06_pursuit_corrected.js
+- src/turn_prediction_v06_pursuit_corrected_base.js
+- src/pursuit_interception_v06_corrected.js
+- src/pursuit_switch_v06_corrected.js
+- src/pursuit_eligibility_v06.js
+
+Earlier implementations are retained for regression comparison.
+
+### Validation
+- STEP 183-A: PASS.
+- STEP 183-E: PASS.
+- STEP 183-F: PASS.
+- Regression tests: 34/34.
+- Failed tests: 0.
+- Regression duration: 9.7116084999999988 seconds.
+- Report: benchmarks/v06_switch_regression.json.
+- Gen 4 Pokemon Showdown source inspected.
+- Full differential engine testing is not complete.
+
+### Known limitations
+- Pressure PP handling requires further engine verification.
+- Choice item locking requires further verification.
+- Sleep recovery and Truant turn lifecycle are incomplete.
+- Simultaneous switch ordering remains approximate.
+- Forced entry ability timing has unresolved edge cases.
+- Weather duration and global residual ordering are incomplete.
+- Full move, item and ability coverage is not complete.
+- Strategic AI v0.6 is not yet a completed competitive agent.
+- No v0.6 strength benchmark has been completed.
+- Strategic AI v0.5 remains the established baseline.
+
+### Isolation
+- Project U.I. main application unchanged.
+- Existing personal memory databases unchanged.
+- Pokemon knowledge remains isolated.
+- No automatic knowledge transfer.
+- Previous local backup files remain untracked.
+
+### Next development phase
+Temporarily prioritize Battle Revolution integration.
+
+Build a separate integration module for:
+1. Dolphin environment verification.
+2. Battle state acquisition.
+3. Controller input.
+4. Battle state normalization.
+5. Strategic AI decision bridge.
+6. Local battle automation.
+7. Gemini decision and commentary integration.
+8. Project U.I. voice commentary.
+9. Controlled online friend battle verification.
+
+Start with read-only state acquisition.
+Do not assume real-game connectivity is already functional.
+Keep the simulator and real-game adapter independent.
+Preserve the ability to disable the Pokemon feature.
+
+Resume v0.6 strategic development after the integration checkpoint.

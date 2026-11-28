@@ -386,3 +386,14 @@ Features:
 - Do not commit local databases, logs or temporary backups.
 - Do not approve knowledge automatically.
 
+
+
+## 2026-11-28 - STEP 184
+- Preserve v0.6 party and switch prediction mechanics.
+- Add entry ability sequencing and resolved damage.
+- Add Pursuit interception and switching integration.
+- Correct Gen 4 Pursuit eligibility and paralysis handling.
+- Pass 34/34 regression tests.
+- Preserve regression report and document limitations.
+- Prepare independent Battle Revolution integration phase.
+- Keep v0.5 and Project U.I. main application unchanged.
